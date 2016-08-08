@@ -11,6 +11,20 @@ project. See [document](https://docs.google.com/document/d/1NiKv-MjULOFyyc8f5w8R
 Uses the `networkx` library for graph representation, manipulation and
 visualization.
 
+## Installation and testing
+
+To install the required dependencies:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+To run the tests:
+
+```bash
+$ python infection_test.py
+```
+
 ## Visualization
 
 Simulation programs are provided to visualize the effects of these two
@@ -67,8 +81,8 @@ graph, starting at the given node.
 
 It keeps track of already visited nodes in order to avoid an infinite loop if
 the graph contains a cycle. Keeping track of visited nodes also allows for a
-slightly more efficient implementation, since we don't visit a given sub-graph
-more than once.
+more efficient implementation, since we don't visit a given sub-graph more than
+once.
 
 This implementation assumes that we can hold the entire graph in memory, and
 that we will not have a stack overflow problem. This might not be true in
@@ -98,19 +112,3 @@ a large amount.
 In a graph with paths between all nodes, the entire graph would become infected.
 In this case the chosen implementation would be completely unusable as a way of
 choosing candidates for an A/B test.
-
-## Installation
-
-To install the required dependencies:
-
-```bash
-$ pip install -r requirements.txt
-```
-
-## Testing
-
-To run the tests:
-
-```bash
-$ python infection_test.py
-```
